@@ -1,0 +1,100 @@
+/*
+ * Copyright (c) 2024, Hack This Fall Sri Lanka. (https://hackthisfall.tech/). All Rights Reserved.
+ * 
+ * This software is the property of Hack This Fall Sri Lanka. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein is strictly forbidden, unless permitted by Hack This Fall in accordance with
+ * the Hack This Fall Commercial License available at https://hackthisfall.tech/coc.
+ * For specific language governing the permissions and limitations under
+ * this license, please see the license as well as any agreement you’ve
+ * entered into with Hack This Fall governing the purchase of this software and any
+ * associated services.
+ */
+
+/* This style sheet contains the base styles for the project. */
+
+/* Sinhala Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+@import 'bulma/css/bulma.css';
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'SFProRegular';
+  src: url('../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProMedium';
+  src: url("../assets/fonts/SFPRODISPLAYMEDIUM.OTF") format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Samarakan';
+  src: url("../assets/fonts/samarakan.ttf") format('truetype');
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "SFProRegular", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Default Global Settings */
+:root {
+  /* Colors */
+  --base-background-color: #ffffff;
+  --base-foreground-color: #000000;
+  --base-red-color: #E71111;
+  --base-green-color: #08A22A;
+  --base-yellow-color: #FFB200;
+  --base-title-color: #000000;
+  --base-subtitle-color: #4B4848;
+  /* Borders */
+  --base-border-radius: 30px;
+  /* Gradient Button */
+  --base-gradient-color-red: #9c2746;
+  --base-gradient-color-yellow: #e69d34;
+  --base-gradient-color-green: #2d4f56;
+}
+
+/* Global Styles */
+.has-sinhala-text {
+  font-family: "Noto Sans Sinhala", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.has-sindi-text {
+  font-family: "Samarakan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.is-gradient-button {
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(60deg,
+      var(--base-gradient-color-yellow),
+      var(--base-gradient-color-red),
+      var(--base-gradient-color-green)) border-box;
+  border-radius: var(--base-border-radius);
+  padding: 10px 70px;
+  border: 5px solid transparent;
+}
+
+.isBold {
+  font-family: "SFProMedium", sans-serif !important;
+}
+
+.base-section {
+  margin: 7rem 0;
+}

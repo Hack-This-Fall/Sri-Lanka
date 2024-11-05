@@ -10,21 +10,22 @@
  * entered into with Hack This Fall governing the purchase of this software and any
  * associated services.
  */
-
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./base/style.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import PropTypes from "prop-types";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const ColorSpacer = ({ width }) => {
+  return (
+    <span className="color-spacer-parent" style={{ width: width }}>
+      <span className="color-spacer color-spacer-red"></span>
+      <span className="color-spacer color-spacer-green"></span>
+      <span className="color-spacer color-spacer-yellow"></span>
+    </span>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ColorSpacer.propTypes = {
+  width: PropTypes.string,
+};
+
+export default ColorSpacer;

@@ -10,21 +10,16 @@
  * entered into with Hack This Fall governing the purchase of this software and any
  * associated services.
  */
-
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./base/style.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+import SectionHeader from "../SectionHeader";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const EventsSection = () => {
+  return (
+    <section className="base-section events-section">
+      <SectionHeader number={5} title="Don’t Miss Out on Any of \n Our Events" subtitle="Get to know us better" highlightWord="Events" />
+    </section>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export default EventsSection;

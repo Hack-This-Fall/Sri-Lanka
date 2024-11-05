@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024, Hack This Fall Sri Lanka. (https://hackthisfall.tech/). All Rights Reserved.
- *
+ * 
  * This software is the property of Hack This Fall Sri Lanka. and its suppliers, if any.
  * Dissemination of any information or reproduction of any material contained
  * herein is strictly forbidden, unless permitted by Hack This Fall in accordance with
@@ -11,20 +11,27 @@
  * associated services.
  */
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./base/style.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+.color-spacer-parent {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+.color-spacer {
+  height: 5px;
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+.color-spacer-red {
+  background-color: var(--base-red-color);
+  width: 33%;
+}
+
+.color-spacer-green {
+  background-color: var(--base-green-color);
+  width: 33%;
+}
+
+.color-spacer-yellow {
+  background-color: var(--base-yellow-color);
+  width: 33%;
+}
